@@ -1,3 +1,5 @@
+This document is best viewed in vscode, which makes it possible to expand and collapse bullet points.
+
 - get_outputs_natural_gas(
     summary_input,dhw_input (optional)temperature_input,oil_propane_billing_input,
 ) 
