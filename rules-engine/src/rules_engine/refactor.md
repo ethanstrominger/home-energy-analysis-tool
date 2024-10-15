@@ -102,7 +102,10 @@ for billing_period in billing_periods
 ```
 ==================
 - Change
-`calculate_dhw_usage()` =>
+```
+calculate_dhw_usage()
+```
+to 
 ```      
            dhw_usage = _calculate_dhw_usage (
            estimated_water_heating_efficiency, 
