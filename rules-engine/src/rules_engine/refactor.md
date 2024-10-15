@@ -12,10 +12,10 @@ home variables used
 
 1. Remove temporary_rules_engine.py
 1. Move files in rules-engine/src/rules_engine to rules-engine/src to avoid dirs with similar names.
-2. Combine class NormalizedBillingPeriodRecordBase and class NormalizedBillingPeriodRecord
-3. Rename new combined class to BillingInput
+3. Rename NormalizedBillingRecordBase class to BillingInput
 4. Rename BillingPeriod to ProcessedBill and billing_period to processed_bill
-5. Combine get_outputs_normalized and convert_to_intermediate_billing_record
+5. Combine get_outputs_normalized and convert_to_intermediate_billing_record and get rid of NormalizedBillingRecord. There is only one place NormalizedBillingRecord is used and combining code
+gets rid of the need for the class.
 - Change
 ```
     billing_periods: list[NormalizedBillingPeriodRecordBase] = []
