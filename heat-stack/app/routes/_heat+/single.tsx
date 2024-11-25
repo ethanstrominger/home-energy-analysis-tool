@@ -406,11 +406,11 @@ Traceback (most recent call last): File "<exec>", line 32,
     let gasBillData = gasBillDataWithUserAdjustments
     if ((usage_data_with_user_adjustments || ``).length > 0) {
         // console.log(`This is now usage_data_with_user_adjustments`)
-        gasBillData = JSON.parse(usage_data_with_user_adjustments, reviver)
+        gasBillData = JSON.parse(usage_data_with_user_adjustments || '{}', reviver)
         // console.log(`gasBillData`, gasBillData);  // 11/12/24 this is correct
     }
     const calculatedData: any = executeRoundtripAnalyticsFromFormJs(parsedAndValidatedFormSchema, convertedDatesTIWD, gasBillData, state_id, county_id).toJs()
-    console.log(`calculatedData:`, calculatedData)
+    // console.log(`calculatedData:`, calculatedData)
 
     // console.log("calculatedData billing records[0]", calculatedData.get('billing_records')[0]);
     // console.log("calculatedData", calculatedData);
